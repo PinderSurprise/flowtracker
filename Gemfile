@@ -8,6 +8,8 @@ gem 'devise'
 # use Twitter Bootstrap gem
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+# Use Yahoo Finance API for stocks
+gem 'stock_quote'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

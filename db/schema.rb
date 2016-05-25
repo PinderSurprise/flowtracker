@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523032158) do
+ActiveRecord::Schema.define(version: 20160523222032) do
+
+  create_table "flowks", force: :cascade do |t|
+    t.string   "stationID"
+    t.string   "name"
+    t.decimal  "waterlevel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
