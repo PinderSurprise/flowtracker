@@ -25,7 +25,7 @@ class UserStocksController < ApplicationController
   # POST /user_stocks.json
   def create
     if params[:stock_id].present?
-      @user_stock = UserStock.new(stock_id: paramas[:stock_id], user: current_user)
+      @user_stock = UserStock.new(stock_id: params[:stock_id], user: current_user)
 
     else
       stock = Stock.find_by_ticker(params[:stock_ticker])
@@ -74,7 +74,7 @@ class UserStocksController < ApplicationController
   def destroy
     @user_stock.destroy
     respond_to do |format|
-      format.html { redirect_to user_stocks_url, notice: 'User stock was successfully destroyed.' }
+      format.html { redirect_to my_water_path, notice: 'Stock was successfully removed.' }
       format.json { head :no_content }
     end
   end
